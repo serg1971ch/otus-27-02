@@ -1,28 +1,12 @@
-package homework;
-<<<<<<< HEAD:gradle/hw04-collection/src/test/java/homework/CustomerTest.java
-
-import main.ru.otus.Customer;
-import main.ru.otus.CustomerService;
-import main.ru.otus.CustomerReverseOrder;
-import org.junit.Test;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.DisplayName;
-
-=======
-import main.ru.otus.Customer;
-import main.ru.otus.CustomerService;
-import main.ru.otus.CustomerReverseOrder;
-import org.junit.jupiter.api.*;
 
 
->>>>>>> 1f63bfe56150d7e1271c2bffdd4de213fbdd640c:gradle/hw02/src/test/java/homework/CustomerTest.java
+
 import java.util.HashMap;
 import java.util.Map;
 
 class CustomerTest {
 
     // Все тесты должны проходить, менять тесты не надо.
-
     @Test
     @DisplayName("Проверяем, что класс Customer не сломан")
     void setterCustomerTest() {

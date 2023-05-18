@@ -1,6 +1,8 @@
 rootProject.name = "gradle"
-include("hw01-gradle")
-include("hw04-collection")
+include ("hw01-gradle")
+include ("hw04-collection")
+include ("hw06-annot")
+
 pluginManagement {
     val jgitver: String by settings
     val dependencyManagement: String by settings
@@ -16,3 +18,4 @@ pluginManagement {
         id("com.google.cloud.tools.jib") version jib
     }
 }
+
