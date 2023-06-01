@@ -1,8 +1,13 @@
+package ru.otus;
 
-
+import org.junit.jupiter.api.Disabled;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 class CustomerTest {
 
@@ -59,7 +64,7 @@ class CustomerTest {
         Customer customer2 = new Customer(2, "Petr", 11);
         Customer customer3 = new Customer(3, "Pavel", 888);
 
-        CustomerService customerService = new main.ru.otus.CustomerService();
+        CustomerService customerService = new CustomerService();
         customerService.add(customer1, "Data1");
         customerService.add(customer2, "Data2");
         customerService.add(customer3, "Data3");

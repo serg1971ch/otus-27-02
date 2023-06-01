@@ -1,4 +1,4 @@
-package ru.otus;
+package calculate.src.main.java.ru.otus;
 
 
 /*

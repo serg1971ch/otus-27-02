@@ -1,3 +1,5 @@
+package ru.otus;
+
 import java.util.AbstractMap;
 import java.util.Comparator;
 import java.util.Map;
