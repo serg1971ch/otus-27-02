@@ -1,19 +1,19 @@
-package otus;
+package ru.otus;
 
-import ru.otus.TestLogging;
-import ru.otus.TestLoggingImpl;
 
-import java.lang.reflect.*;
+import java.lang.reflect.InvocationHandler;
+import java.lang.reflect.Method;
+import java.lang.reflect.Proxy;
 
 
 public class Ioc {
     private Ioc() {
     }
 
-    public static ru.otus.TestLogging createMyClass() {
+    public static TestLogging createMyClass() {
         InvocationHandler handler = new DemoInvocationHandler(new TestLoggingImpl());
-        return (ru.otus.TestLogging) Proxy.newProxyInstance(Ioc.class.getClassLoader(),
-                new Class[]{ru.otus.TestLogging.class}, handler);
+        return (TestLogging) Proxy.newProxyInstance(Ioc.class.getClassLoader(),
+                new Class[]{TestLogging.class}, handler);
     }
 
     static class DemoInvocationHandler implements InvocationHandler {

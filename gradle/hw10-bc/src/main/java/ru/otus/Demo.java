@@ -1,9 +1,10 @@
-package otus;
+package ru.otus;
 
-import ru.otus.TestLoggingImpl;
 
 public class Demo {
     public void action() {
+//        TestLogging testLogging = Ioc.createMyClass();
+//        testLogging.calculation(6);
         new TestLoggingImpl().calculation(6);
     }
 
