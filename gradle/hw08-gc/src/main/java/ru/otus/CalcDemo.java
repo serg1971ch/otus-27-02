@@ -1,4 +1,4 @@
-package ru.otus;
+package calculate.src.main.java.ru.otus;
 
 
 /*
@@ -15,7 +15,8 @@ import java.time.LocalDateTime;
 
 public class CalcDemo {
     public static void main(String[] args) {
-        long counter = 100_000_000;
+//        long counter = 100_000_000;
+        int counter = 100_000_000;
         var summator = new ru.otus.Summator();
         long startTime = System.currentTimeMillis();
 
