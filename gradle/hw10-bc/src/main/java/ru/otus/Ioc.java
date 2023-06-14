@@ -1,11 +1,8 @@
 package ru.otus;
 
-
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
-import ru.otus.TestLogging;
-
 
 public class Ioc extends ClassLoader {
     private Ioc() {
