@@ -2,7 +2,7 @@ package ru.otus;
 
 import java.util.Arrays;
 
-class TestLoggingImpl implements TestLogging {
+ class  TestLoggingImpl implements TestLogging {
     @LogTest
     @Override
     public TestLogging calculation(Object... param) {
