@@ -17,15 +17,14 @@ public class Summator {
         if (listValues.length % 6_600_000 == 0) {
             listValues=null;;
         }
-        sum += data.getValue();
-
-        sumLastThreeValues = data.getValue() + prevValue + prevPrevValue;
+        sum += data.value();
+        sumLastThreeValues = data.value() + prevValue + prevPrevValue;
 
         prevPrevValue = prevValue;
-        prevValue = data.getValue();
+        prevValue = data.value();
 
         for (var idx = 0; idx < 3; idx++) {
-            someValue += (sumLastThreeValues * sumLastThreeValues / (data.getValue() + 1) - sum);
+            someValue += (sumLastThreeValues * sumLastThreeValues / (data.value() + 1) - sum);
             someValue = Math.abs(someValue) + listValues.length;
         }
     }

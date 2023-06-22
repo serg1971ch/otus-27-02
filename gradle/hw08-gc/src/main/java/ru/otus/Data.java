@@ -1,13 +1,13 @@
 package ru.otus;
 
-public class Data {
-    private final Integer value;
+public record  Data (int value){
 
-    public Data(Integer value) {
-        this.value = value;
-    }
 
-    public Integer getValue() {
-        return value;
-    }
+//    public Data(Integer value) {
+//        this.value = value;
+//    }
+//
+//    public Integer getValue() {
+//        return value;
+//    }
 }
