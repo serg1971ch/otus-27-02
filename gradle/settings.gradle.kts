@@ -4,7 +4,7 @@ include ("hw04-collection")
 include ("hw06-annot")
 include ("hw08-gc")
 include ("hw10-bc")
-
+include ("hw12-oop")
 pluginManagement {
     val jgitver: String by settings
     val dependencyManagement: String by settings
