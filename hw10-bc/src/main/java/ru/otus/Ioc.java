@@ -9,11 +9,9 @@ public class Ioc extends ClassLoader {
     }
 
     public static TestLogging createMyClass() throws InstantiationException, IllegalAccessException {
-        Class<Ioc> clazz = Ioc.class;
-        Ioc instanceIoc = clazz.newInstance();
 
         InvocationHandler handler = new DemoInvocationHandler(new TestLoggingImpl());
-        return (TestLogging) Proxy.newProxyInstance(instanceIoc,
+        return (TestLogging) Proxy.newProxyInstance(new Ioc(),
                 new Class[]{TestLogging.class}, handler);
     }
 
