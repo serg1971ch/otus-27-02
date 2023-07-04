@@ -1,11 +1,48 @@
+import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+
 plugins {
     id 'java'
+    id("com.github.johnrengelman.shadow") version "4.0.4"
 }
 
-group 'ru.otus'
+//dependencies {
+//
+//    classpath 'com.github.jengelman.gradle.plugins:shadow:6.0.0'
+//}
+
+//group 'ru.otus'
 
 sourceCompatibility = JavaVersion.VERSION_17
 targetCompatibility = JavaVersion.VERSION_17
 
 compileJava.options.encoding = 'UTF-8'
 compileTestJava.options.encoding = 'UTF-8'
+
+//tasks.named('shadowJar', ShadowJar) {
+//    enableRelocation true
+//}
+
+tasks.named('shadowJar', ShadowJar) {
+    archiveBaseName.set("gradleHelloWorld")
+    archiveVersion.set("0.1")
+    archiveClassifier.set("")
+//    manifest {
+//        attributes(mapOf("Main-Class":"ru.otus.Main"))
+//    }
+    jar {
+    manifest {
+        attributes 'Main-Class': 'ru.otus.Main'
+    }
+}
+}
+
+build {
+    dependsOn(shadowJar)
+}
+
+
+//jar {
+//    manifest {
+//        attributes 'Main-Class': 'ru.otus.Main'
+//    }
+//}
