@@ -1,4 +1,4 @@
-package ru.otus;
+package ru.otus.money;
 
 public enum NominalBanknote {
     HUNDRED(100),
@@ -15,4 +15,12 @@ public enum NominalBanknote {
     public int getValue() {
         return value;
     }
+
+    @Override
+    public String toString() {
+        return " по " + getValue() + " рублей";
+    }
 }
+
+
+
